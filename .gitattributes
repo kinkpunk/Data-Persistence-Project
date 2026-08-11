@@ -1,0 +1,78 @@
+# Автоматическая нормализация текстовых файлов
+* text=auto
+
+# Код
+*.cs text
+*.shader text
+*.cginc text
+*.hlsl text
+*.compute text
+
+# Текстовые данные
+*.json text
+*.xml text
+*.md text
+*.txt text
+
+# Unity YAML-файлы
+*.unity text
+*.prefab text
+*.asset text
+*.meta text
+*.mat text
+*.controller text
+*.overrideController text
+*.physicMaterial text
+*.guiskin text
+
+# Изображения
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.bmp binary
+*.tga binary
+*.psd binary
+*.exr binary
+*.hdr binary
+*.tif binary
+*.tiff binary
+
+# 3D-модели
+*.fbx binary
+*.obj binary
+*.blend binary
+*.dae binary
+*.3ds binary
+*.max binary
+
+# Звук
+*.wav binary
+*.mp3 binary
+*.ogg binary
+*.aif binary
+*.aiff binary
+*.flac binary
+
+# Шрифты
+*.ttf binary
+*.otf binary
+
+# Библиотеки и бинарники
+*.dll binary
+*.so binary
+*.dylib binary
+*.exe binary
+*.pdb binary
+*.mdb binary
+
+# Архивы и пакеты
+*.zip binary
+*.7z binary
+*.rar binary
+*.unitypackage binary
+
+# Мобильные сборки
+*.apk binary
+*.aab binary
+*.app binary
