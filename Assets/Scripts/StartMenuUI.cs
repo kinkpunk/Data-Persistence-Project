@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class StartMenuUI : MonoBehaviour
 {
-    public InputField NameInputField;
+    public TMP_InputField NameInputField;
 
     public void StartGame()
     {

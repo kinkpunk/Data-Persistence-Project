@@ -173,7 +173,7 @@ public class MainManager : MonoBehaviour
             displayName = m_PlayerName;
         }
 
-        HighScoreText.text = $"Best Score : {displayScore}\n{displayName}";
+        HighScoreText.text = $"Best Score : {displayScore} | {displayName}";
     }
 
     public void SaveScore()

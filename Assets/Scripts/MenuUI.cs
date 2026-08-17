@@ -1,28 +1,36 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class MenuUI : MonoBehaviour
 {
-    public InputField NameInputField;
-
-    // Ссылки на панели UI в инспекторе
-    public GameObject MenuPanel;
-    public GameObject GamePanel;
+    public TMP_InputField NameInputField;
 
     public void StartGame()
     {
-        // Сохраняем имя в статическую переменную MainManager
-        if (NameInputField != null && !string.IsNullOrEmpty(NameInputField.text))
+        string enteredName = "";
+
+        if (NameInputField != null)
         {
-            MainManager.CurrentPlayerName = NameInputField.text;
+            enteredName = NameInputField.text.Trim();
+        }
+
+        if (string.IsNullOrEmpty(enteredName))
+        {
+            GameData.PlayerName = "Player";
         }
         else
         {
-            MainManager.CurrentPlayerName = "Player";
+            GameData.PlayerName = enteredName;
         }
 
-        // Скрываем меню и показываем игровой UI
-        if (MenuPanel != null) MenuPanel.SetActive(false);
-        if (GamePanel != null) GamePanel.SetActive(true);
+        // Если ваша игровая сцена называется не Main, замените имя сцены
+        SceneManager.LoadScene("Main");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
